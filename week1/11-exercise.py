@@ -15,7 +15,7 @@ passcode: leading zero를 포함한 000 ~ 100 사이 3자리 정수 (30이면 '0
     msg: 응답 메시지
 }
 
-
+// X
 Logout
 method: GET
 URL: https://overstudy.com/parathon/api/logout

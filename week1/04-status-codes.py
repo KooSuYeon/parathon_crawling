@@ -17,7 +17,7 @@ print('r3:', r3)
 print('r4:', r4)
 
 # How to check the response is ok?
-if r1.status_code == requests.codes.ok:
+if r1.status_code == requests.codes.ok: # 200번, 300번대만
     print('r1 is ok.')
 else:
     print('r1 is not ok.')
@@ -30,3 +30,4 @@ else:
 print('----------')
 # Raise exception when response is not ok
 r1.raise_for_status()
+# 400, 500번대

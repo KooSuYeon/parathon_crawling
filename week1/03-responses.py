@@ -27,5 +27,5 @@ print(response['text'])
 print('--- JSON ---')
 print(response['json'])
 
-img = Image.open(response['image'])
+img = Image.open(response['image']) # 이미지를 여는 방법
 img.show()
