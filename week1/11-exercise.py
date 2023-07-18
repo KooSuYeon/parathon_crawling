@@ -44,4 +44,5 @@ response: json
     data: 성공일 경우 요청된 쿼리에 맞는 데이터를 json 형태로 반환
 }
 
+
 '''

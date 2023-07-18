@@ -13,7 +13,7 @@ print(r.text, f'(took {duration}secs)')
 
 print('----------')
 
-r_timeout = requests.get(url, timeout=5) # erroneous script (comment this line)
+# r_timeout = requests.get(url, timeout=5) # erroneous script (comment this line)
 
 try:
     response = requests.get(url, timeout=5)
