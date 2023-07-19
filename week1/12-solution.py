@@ -44,8 +44,9 @@ class ExerciseCrawler:
         print('--- Response ---')
         print('code:', data.get('code'))
         print('msg:', data.get('msg'))
-        for d in data.get('data'):
-            print(d)
+        if (data.get('code') == 0):
+            for d in data.get('data'):
+                print(d)
         print('----------------')
     def close(self):
         self.session.close()
