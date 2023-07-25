@@ -7,7 +7,7 @@ url = 'https://overstudy.com/parathon/long_response'  # takes >5 seconds to resp
 
 r = requests.get(url) # no limit, it waits forever
 
-duration = round(time.time() - start, 2)  # elapsed time
+duration = round(time.time() - start, 2)  # elapsed time 
 
 print(r.text, f'(took {duration}secs)')
 
@@ -17,5 +17,6 @@ print('----------')
 
 try:
     response = requests.get(url, timeout=5)
+    print(response.text)
 except requests.exceptions.Timeout:
     print('Request timed out!')

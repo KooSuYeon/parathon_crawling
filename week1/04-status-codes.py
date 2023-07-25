@@ -16,6 +16,7 @@ print('r2:', r2)
 print('r3:', r3)
 print('r4:', r4)
 
+
 # How to check the response is ok?
 if r1.status_code == requests.codes.ok:
     print('r1 is ok.')

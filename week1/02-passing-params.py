@@ -1,6 +1,6 @@
 import requests
 
-payload = {'key1': 'value1', 'key2': 'value2', 'test': '1234'}
+payload = {'key1': 'value1', 'key2': 'value2'}
 
 url = 'https://overstudy.com/parathon/param'
 
