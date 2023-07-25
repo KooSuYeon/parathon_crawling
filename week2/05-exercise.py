@@ -11,7 +11,7 @@ r = requests.get(
 soup = BeautifulSoup(r.text, 'html.parser')
 
 # 1. 문제 제목을 str 형태로 저장
-problem_title: str = '여기에 코드를 작성해주세요.'
+problem_title: str = soup.select_one('#problem_title').text
 
 # 2. 예제 입력 1을 str 형태로 저장
 sample_input_1: str = '여기에 코드를 작성해주세요.'
