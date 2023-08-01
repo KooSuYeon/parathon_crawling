@@ -1,14 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-r = requests.get('https://overstudy.com/parathon')
+r = requests.get('https://music.bugs.co.kr/chart')
 
-soup = BeautifulSoup(r.text, 'html.parser')
+soup = BeautifulSoup(r.text,'html.parser')
 
-soup.title.string = 'CHANGED_TITLE'
-soup.title.name = 'changed_name'
-
-print(soup)
-
-print('title:', soup.title)
-print('changed_name:', soup.changed_name)
+titles = soup.select('p.title')
+artists = soup.select('p.artist')
+for rank in range(len(titles)): 
+    print(str(rank) +  "위 : " + titles[rank].text.rstrip().split('\n')[1] + " , 가수: " + artists[rank].text.rstrip().split('\n')[1])
