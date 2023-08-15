@@ -20,7 +20,7 @@ sample_input_1: str = soup.select_one('#sample-input-1').text
 created_by: str = soup.select_one('#source > ul > li > a').text
 
 # 4. 문제의 정답 비율을 float 형태로 저장 ('%' 기호 제외)
-rate: float = float(soup.select_one('#problem-info > tbody > tr > td:nth-child(6)').text[:6])
+rate: float = float(soup.select_one('#problem-info > tbody > tr > td:nth-child(6)').text[:4])
 
 # 5. 문제 본문 전체를 str 형태로 저장
 problem_body: str = soup.select_one('#problem_description').text
